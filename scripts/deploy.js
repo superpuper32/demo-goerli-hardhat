@@ -3,12 +3,12 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const contract = await hre.ethers.deployContract("Contract");
+  const emitWinner = await hre.ethers.deployContract("EmitWinner");
 
-  await contract.waitForDeployment();
+  await emitWinner.waitForDeployment();
 
   console.log(
-    `Contract was deployed to ${contract.target}`
+    `Contract EmitWinner was deployed to ${emitWinner.target}`
   );
 }
 
